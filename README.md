@@ -82,3 +82,10 @@ pedigree variable links sample ids with appropriate flowcells, lanes, and barcod
 
 Running fastqs-small.txt subset of individuals takes about two minutes on mac bookAir. The full 100 families should take less than one hour.
 
+The file trioSummary/o/allDenovoCalls.txt should be identical to the allDenovoCalls.txt
+
+If you rerun the project, you first have to remove created directories.
+This can be done with 'sobjects cleanProject'
+It will ask you to remove .snakemake, OG.json, and all object directories.
+Type 'n' whan asked to remove .snakemake, since this directory contains newly created conda environment and recreating it will take a lot of time.
+

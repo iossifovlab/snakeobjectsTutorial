@@ -1,5 +1,5 @@
 so_pipeline: "[D:project]/workflow"
-default_snakemake_args: "--use-conda -j"
+default_snakemake_args: "--use-conda --latency-wait 30 -j"
 
 inputDir:   "https://raw.githubusercontent.com/iossifovlab/snakeobjectsTutorialInput/main"
 fastqDir:   "https://raw.githubusercontent.com/iossifovlab/snakeobjectsTutorialInput/main/fastq"
