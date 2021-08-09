@@ -1,0 +1,15 @@
+so_pipeline: "[D:project]/workflow"
+default_snakemake_args: "--use-conda -j"
+
+inputDir:   "https://raw.githubusercontent.com/iossifovlab/snakeobjectsTutorialInput/main"
+fastqDir:   "https://raw.githubusercontent.com/iossifovlab/snakeobjectsTutorialInput/main/fastq"
+chrAllFile: "[PP:inputDir]/chrAll.fa"
+target:     "[PP:inputDir]/targetRegions.bed"
+pedigree:   "[PP:inputDir]/collection.ped"
+#
+# For for running all 100 families comment line with fastqs-small.txt
+# and uncomment the line with fastqs.txt
+#
+#
+fastqsFile: "[D:project]/fastqs-small.txt"
+#fastqsFile: "[PP:inputDir]/fastqs.txt"

@@ -1,0 +1,11 @@
+name: snakeobjectsTutorial
+channels:
+  - iossifovlab 
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - snakeobjects
+  - pandas
+  - matplotlib
+  - graphviz

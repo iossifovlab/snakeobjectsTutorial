@@ -1,0 +1,1 @@
+dadId	momId	chlId	chrom	pos	newAllele	dad.A	dad.C	dad.G	dad.T	mom.A	mom.C	mom.G	mom.T	chl.A	chl.C	chl.G	chl.T
