@@ -43,7 +43,7 @@ git clone https://github.com/iossifovlab/snakeobjectsTutorial.git
 After cloning repository type:
 
 cd snakeobjectsTutorial
-conda env create -f workflow/environment.yaml
+conda env create -f workflow/environment.yml
 conda activate snakeobjectsTuroria
 
 Familiarize yourself with sobjects commands by typing 'sobjects help.'
