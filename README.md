@@ -22,13 +22,14 @@ The directory structure is
     └── trioSummary.snakefile
 
 README.md - this file
-fastqs-small.txt      - a subset for individuals for testing workflow
+fastqs-small.txt      - a subset of individuals for testing workflow
 so_project.yaml       - configuration file for the project
-allDenovoCalls.txt    - results to thest against the run with fastqs-small.txt
+allDenovoCalls.txt    - results of the run with fastqs-small.txt
 build_object_graph.py - a python script creating OG.json and workflow/Snakefile
-*.snakefile - snakefiles for different type objects in the project
-environment.yaml      - is global environment for the project
-env-pysam.yml and env-bwa.yml - environment for individual rules in snakefile
+*.snakefile           - snakefiles for different type objects in the project
+environment.yaml      - is the global environment for the project
+env-pysam.yml         - environment for individual rules in snakefile
+env-bwa.yml           - environment for individual rules in snakefile
 
 Installation and usage
 
@@ -42,9 +43,9 @@ After cloning repository type:
 
 cd snakeobjectsTutorial
 conda env create -f workflow/environment.yml
-conda activate snakeobjectsTuroria
+conda activate snakeobjectsTutorial
 
-Familiarize yourself with sobjects commands by typing 'sobjects help.'
+Familiarize yourself with sobjects commands by typing 'sobjects help'.
 
 Typical sequence of command:
 sobjects describe
@@ -62,7 +63,6 @@ chrAllFile: "[PP:inputDir]/chrAll.fa"
 target:     "[PP:inputDir]/targetRegions.bed"
 pedigree:   "[PP:inputDir]/collection.ped"
 #
-# For testing uncomment the line with fastqs-small.txt
 # For full 100 families uncomment the line with fastqs.txt
 #
 #
@@ -80,11 +80,11 @@ pedigree variable links sample ids with appropriate flowcells, lanes, and barcod
 
 Running fastqs-small.txt subset of individuals takes about two minutes on mac bookAir. The full 100 families should take less than one hour.
 
-The file trioSummary/o/allDenovoCalls.txt should be identical to the allDenovoCalls.txt
+When running on a fastqs-small.txt subset of individuals the file trioSummary/o/allDenovoCalls.txt should be identical to the file allDenovoCalls.txt
 
 If you rerun the project, you first have to remove created directories.
 This can be done with 'sobjects cleanProject'
 It will ask you to remove .snakemake, OG.json, and all object directories.
-Type 'n' whan asked to remove .snakemake, since this directory contains newly created conda environment and recreating it will take a extra unnecessary time time.
+Type 'n' whan asked to remove .snakemake, since this directory contains newly created conda environment and recreating it will take an extra unnecessary time.
 
 
