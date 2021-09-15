@@ -33,7 +33,7 @@ env-bwa.yml           - environment for individual rules in snakefile
 
 Installation and usage
 
-Prequisite: conda.
+Prerequisite: conda.
 
 First, clone the repository to a local directory
 
