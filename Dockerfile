@@ -35,10 +35,10 @@ RUN mamba env create --prefix /conda-envs/a2df1b4c49e9aebb091721e0f785660b --fil
 
 FROM snakeobjects
 
-WORKDIR /app
+WORKDIR /workdir
 
 # copy workflow and create the ENTRYPOINT:
-COPY . /app
+COPY . /workdir
 
 ENTRYPOINT ["conda", "run", "-n", "snakeobjects", "/bin/bash", "-c"]
 CMD ["./run.sh"]
