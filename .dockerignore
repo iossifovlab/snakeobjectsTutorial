@@ -1,2 +1,8 @@
 workflow/__pycache__
 .snakemake
+reference
+fastq
+sample
+sampleSummary
+trio
+trioSummary

@@ -40,5 +40,10 @@ WORKDIR /workdir
 # copy workflow and create the ENTRYPOINT:
 COPY . /workdir
 
+RUN echo "conda init bash" >> ~/.bashrc
+RUN echo "conda activate snakeobjects" >> ~/.bashrc
+RUN echo "export PATH=/workdir/workflow:$PATH" >> ~/.bashrc
+ENV PATH /opt/conda/envs/snakeobjects/bin:${PATH}
+
 ENTRYPOINT ["conda", "run", "-n", "snakeobjects", "/bin/bash", "-c"]
 CMD ["./run.sh"]
